@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+a{
+    text-decoration: none;
+}
+.bg{
+    position: fixed;
+    background: #000;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    opacity: .4;
+    z-index: 2;
+}
+.close-button {
+    font-weight: 400;
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Posiciona o botão "X" no canto superior esquerdo */
+    cursor: pointer;
+    width: 30px; /* Define a largura do botão */
+    height: 30px; /* Define a altura do botão */
+    background-color: #ffffff; /* Define a cor de fundo do botão */
+    color: #000000; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 50%; /* Faz o botão parecer um círculo */
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao botão */
+    font-size: 18px; /* Define o tamanho do texto */
+    display: flex; /* Permite centralizar o ícone horizontalmente e verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    align-items: center; /* Centraliza o ícone verticalmente */
+    margin-top: 0px;
+}
+
+.close-button:hover {
+    background-color: #eeeeee; /* Muda a cor de fundo quando o botão é hover */
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* product card box */
+.product{
+    width: 24%;
+    margin:10px .5% 30px;
+}
+
+.product .image{
+    position: relative;
+    height: 200px;
+    z-index: 1;
+}
+.product .image img{
+    max-width: 80%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+.product .description{
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 60px 20px 20px;
+    position: relative;
+    margin-top: -50px;
+}
+.product .favorite{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+.product .product-title{
+    margin-bottom: 20px;
+}
+
+.product .detail{
+    display: flex;
+}
+.product .detail div{
+    width: 50%;
+}
+.product .to-cart{
+    text-align: right;
+}
+
+/* both */
+.title{
+    color: #003566;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+.subtitle{
+    color: #001d3d;
+    font-size: 1em;
+}
+.favorite i{
+    color:#ff2d7e;
+}
+.price{
+    font-size: 1.3em;
+    color:#000814;
+    font-weight: 800;
+}
+.btn-add{
+    border:0;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #003566;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* full product */
+.full-product {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto; /* Permitir rolagem vertical dentro do popup */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.full-product .image img{
+    max-width: 100%;
+}
+.info,
+.appreciation,
+.cart{
+    display: flex;
+}
+.info div,
+.appreciation div,
+.cart div{
+    width: 50%;;
+}
+
+.full-product .description,
+.full-product .review,
+.full-product .favorite{
+    text-align: right;
+}
+.full-product h2{
+    margin: 10px 0;
+}
+.full-product .more-info{
+    padding: 20px 0;
+}
+.full-product .yellow{
+    color:#e63946;
+}
+.full-product .gray{
+    color:#dbdbdb;
+}
+
+/* animations */
+.transition{
+    transition: all 200ms ease-in;
+}
+.product:hover .image{
+    transform:scale(1.2) rotate(-5deg);
+}
+.product:hover .description{
+    background-color: #efe3ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ .slide{
+    width: 100%;
+ }
+  
+  /*.container2 {
+    max-width: 75%;
+    margin: auto;
+    height: 80vh;
+    margin-top: 5%;
+    background: white;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+  }*/
+  
+  .left, .right {
+    width: 100%;
+    padding: 30px;
+    margin-top: -100px;
+
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .flex1 {
+    display: flex;
+  }
+  
+  .main_image {
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #e9eae5;
+  }
+  
+  .option img {
+    /*width: 75px;
+    height: 75px;
+    padding: 10px;
+    border: 1px solid rgb(255 255 255);
+    border-radius: 5px;*/
+    width: 84px;
+    height: 62px;
+    margin-left: 10px;
+    padding: 4px;
+    border-radius: 5px;
+    margin: 1px 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .right {
+    padding: 50px 100px 50px 50px;
+  }
+  
+  .productTitle {
+    color: #383838;
+    margin: 20px 0 20px 0;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  h5,
+  p {
+    color: #837D7C;
+  }
+  
+ .precoTracoDe{
+  text-decoration: none;
+ }
+  
+  p {
+    margin: 20px 0 50px 0;
+    line-height: 25px;
+  }
+  
+  h5 {
+    font-size: 15px;
+  }
+  
+  label,
+  .add span,
+  .color span {
+    width: 25px;
+    height: 25px;
+    background: #000;
+    border-radius: 50%;
+    margin: 20px 10px 20px 0;
+  }
+  
+  .color span:nth-child(2) {
+    background: #EDEDED;
+  }
+  
+  .color span:nth-child(3) {
+    background: #D5D6D8;
+  }
+  
+  .color span:nth-child(4) {
+    background: #EFE0DE;
+  }
+  
+  .color span:nth-child(5) {
+    background: #AB8ED1;
+  }
+  
+  .color span:nth-child(6) {
+    background: #F04D44;
+  }
+  
+  .add label,
+  .add span {
+    background: none;
+    border: 1px solid #C1908B;
+    color: #C1908B;
+    text-align: center;
+    line-height: 25px;
+  }
+  
+  .add label {
+    padding: 10px 30px 0 20px;
+    border-radius: 50px;
+    line-height: 0;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #C1908B;
+    color: white;
+    margin-top: 20%;
+    border-radius: 30px;
+  }
+  
+  @media only screen and (max-width:768px) {
+    .container2 {
+      max-width: 90%;
+      margin: auto;
+      height: auto;
+    }
+  
+    .left, .right {
+      width: 100%;
+      margin-top: -20px;
+
+    }
+  
+    .container2 {
+      flex-direction: column;
+    }
+  }
+  
+  @media only screen and (max-width:511px) {
+    .container2 {
+      max-width: 100%;
+      height: auto;
+      padding: 0px;
+    }
+  
+    .left, .right {
+      padding: 0;
+    }
+  
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .option {
+      /*display: flex;
+      overflow: overlay;
+      margin-top: 2px;
+      background-color: #e9eae5;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;*/
+      display: flex;
+      overflow: overlay;
+      margin-top: 12px;
+      /* background-color: #e9eae5; */
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 4px;
+    }
+  }
+  
+  .preço{
+    font-size: 1.3rem;
+    color: #e63946;
+    font-weight: 800;
+
+  }
+  .precoTraco{
+    color: #e63946;
+    text-decoration: line-through;
+    font-size: 20px;
+  }

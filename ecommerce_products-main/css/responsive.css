@@ -1,0 +1,13 @@
+
+@media (min-width: 320px) and (max-width: 480px) { 
+    .container{
+        display: block;
+        padding: 10px 20px;
+    }
+    .container > div{
+        width: 100%;
+    }
+    .product .image img{
+        max-width: 70%;
+    }
+}
